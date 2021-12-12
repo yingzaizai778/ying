@@ -169,6 +169,7 @@ idxPrac = shuffle(idxPrac);
 for (i=0; i<numTrials_prac; i++){
   condPrac[i] = condInitialPrac[idxPrac[i]];
 }
+console.log(condPrac);
 for (i=0; i < numTrials_per_blcok*number_of_blocks; i++) {
   idx[i] = i;
   condInitial[i] = [];
@@ -181,7 +182,7 @@ idx = shuffle(idx);
 for (i=0; i<numTrials_per_blcok*number_of_blocks; i++){
   cond[i] = condInitial[idx[i]];
 }
-
+console.log(cond);
 
 // Main prog that runs the 'animation'/frame loop
 init();
