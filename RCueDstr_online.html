@@ -12,8 +12,8 @@
 document.body.style.backgroundColor = "black"; // set background of whole page
 document.getElementById('canvas').style.cursor = "none";
 // Expt parameters
-var numTrials_per_blcok = 36; //total number of trials
-var numTrials_prac = 12;
+var numTrials_per_blcok = 40; //total number of trials
+var numTrials_prac = 20;
 var number_of_blocks = 6;
 var estimateTime = 50;
 var set_size = 2;
@@ -147,10 +147,10 @@ for (i=0; i < numTrials_prac; i++) {
 }
 
 //Prepare list of conditions
-var valList = [0,0,0,0,1,1,1,1,1,1,1,1];
-var cueList = [0,1,0,1,0,1,0,1,0,1,0,1];
-var dstrList = [0,0,1,1,0,0,1,1,0,0,1,1];
-var tgtList = [1,0,1,0,0,1,0,1,0,1,0,1];
+var valList =  [0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+var cueList =  [0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1];
+var dstrList = [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1];
+var tgtList =  [1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1];
 var condInitial = [];
 var condInitialPrac = [];
 var idx = [];
@@ -160,10 +160,10 @@ var condPrac = [];
 for (i=0;i<numTrials_prac;i++){
   idxPrac[i] = i;
   condInitialPrac[i] = [];
-  condInitialPrac[i][0] = valList[i%12];
-  condInitialPrac[i][1] = cueList[i%12];
-  condInitialPrac[i][2] = dstrList[i%12];
-  condInitialPrac[i][3] = tgtList[i%12];
+  condInitialPrac[i][0] = valList[i%20];
+  condInitialPrac[i][1] = cueList[i%20];
+  condInitialPrac[i][2] = dstrList[i%20];
+  condInitialPrac[i][3] = tgtList[i%20];
 }
 idxPrac = shuffle(idxPrac);
 for (i=0; i<numTrials_prac; i++){
@@ -172,10 +172,10 @@ for (i=0; i<numTrials_prac; i++){
 for (i=0; i < numTrials_per_blcok*number_of_blocks; i++) {
   idx[i] = i;
   condInitial[i] = [];
-  condInitial[i][0] = valList[i%12];
-  condInitial[i][1] = cueList[i%12];
-  condInitial[i][2] = dstrList[i%12];
-  condInitial[i][3] = tgtList[i%12];
+  condInitial[i][0] = valList[i%20];
+  condInitial[i][1] = cueList[i%20];
+  condInitial[i][2] = dstrList[i%20];
+  condInitial[i][3] = tgtList[i%20];
 }
 idx = shuffle(idx);
 for (i=0; i<numTrials_per_blcok*number_of_blocks; i++){
