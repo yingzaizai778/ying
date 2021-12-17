@@ -26,7 +26,7 @@ const min_color_dist = 45;
 const durITI = 500
 const durInter1 = 500
 const durStim = 250
-const durInter2 = 250
+const durInter2 = 500
 const durCue = 250
 const durDelay1 = 1000
 const durDstr = 500
@@ -390,7 +390,7 @@ function blockEnd() {
     ctx.fillText(feedback3, 40, 300); 
   } else if (blockNum == number_of_blocks){
     ctx.fillStyle = "red";
-    feedback3 = "IMPORTANT! Click on the white circle to upload your data."
+    feedback3 = "IMPORTANT! Click on the white circle to download and send your data to the researcher, otherwise you cannot get paid."
     ctx.fillText(feedback3, 40, 300); 
   }
   
@@ -829,7 +829,7 @@ function writeStuff() {
   desText.appendChild(addString); document.body.appendChild(desText);   
 
   desText = document.createElement("p");
-  addString = document.createTextNode("Please download the below link and submit it to the researchers (yz5725@nyu.edu) to get your credit/allowance."); // add link/email address? depends how the participant was recruited
+  addString = document.createTextNode("Please download the below link (right clik!) and submit it to the researchers (yz5725@nyu.edu) to get your credit/allowance."); // add link/email address? depends how the participant was recruited
   desText.appendChild(addString); document.body.appendChild(desText); 
 
     var textField = document.createElement("TEXTAREA"); 
@@ -847,7 +847,7 @@ function writeStuff() {
      textFileURL = window.URL.createObjectURL(data);
      var downloadLink = document.createElement("a");
 
-     var linkText = document.createTextNode("Right click this link above save it as .csv file using your initial name/Prolifc ID, age, and handedness.");
+     var linkText = document.createTextNode("Right click this link and save it as .csv file using your Prolifc ID, age, gender and handedness.");
      downloadLink.appendChild(linebreak);
      downloadLink.appendChild(linkText);
      downloadLink.title = "Right click to download the data";
@@ -855,7 +855,7 @@ function writeStuff() {
      document.body.appendChild(downloadLink);   
 
   desText = document.createElement("p");
-  addString = document.createTextNode("For example, save as: ST_25_Right.csv or prolificID_25_Right.csv if you signed up via Prolific");
+  addString = document.createTextNode("For example, save as: prolificID_25_F_Right.csv");
   desText.appendChild(addString); 
   document.body.appendChild(desText);   
 
